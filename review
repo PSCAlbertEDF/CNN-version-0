@@ -11,7 +11,7 @@ multi-digit number classification([1312.6082] Multi-digit Number Recognition fro
 这个方法的好处在于可以产生任意长度的文字，并且模型的性质决定了它有能力学到文字于文字之间的联系(temporal relations/dependencies)。
 不足之处在于sequential natural决定了它的计算效率没有CNN高，并且还有潜在的gradients exploding/vanishing的问题
 
-
+http://karpathy.github.io/2015/05/21/rnn-effectiveness/ a thorough overview on Recurrent Neural Networks 
 
 3,另一类不需要对文字预先分割的方法就是attention-mechanism，attention可以分为hard attention和soft attention.
 Franchement a la mode!!!
