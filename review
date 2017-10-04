@@ -14,6 +14,7 @@ multi-digit number classification([1312.6082] Multi-digit Number Recognition fro
 
 
 3,另一类不需要对文字预先分割的方法就是attention-mechanism，attention可以分为hard attention和soft attention.
+Franchement a la mode!!!
 
 Recurrent Models of Visual Attention, 2014:
 https://arxiv.org/abs/1406.6247
