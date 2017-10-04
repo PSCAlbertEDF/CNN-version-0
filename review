@@ -1,25 +1,22 @@
-https://arxiv.org/pdf/1412.4183.pdf
-1,detection models: 
-近两年比较热门的object detection model有 faster-rcnn(https://arxiv.org/pdf/1506.01497.pdf) 
-和 yolo(http://pjreddie.com/media/files/papers/yolo.pdf), 
-两个模型都是基于CNN给出proposed regions 同时对object region进行分类。 其中yolo比faster-rcnn的速度更快，但是在accuracy上有些损失。
+Un general review: https://arxiv.org/pdf/1412.4183.pdf
 
-2,classification models
+Three Classification models for OCR:
 
-比较著名的是Ian goodfellow在13年提出的
+1，比较著名的是Ian goodfellow在13年提出的 (Which is our Google Article)
 multi-digit number classification([1312.6082] Multi-digit Number Recognition from Street View Imagery using Deep Convolutional Neural Networks)
-
 同样也是基于deep CNN. 该方法的不足在于要事先选定可预测的sequence的最大长度，较适用于门牌号码或者车牌号码(少量字符, 且每个字符之间可以看作是独立);
-另一类比较常用的方法是RNN/LSTM/GRU + CTC, 方法最早由Alex Graves在06年提出应用于语音识别。
+
+
+2，另一类比较常用的方法是RNN/LSTM/GRU + CTC, 方法最早由Alex Graves在06年提出应用于语音识别。
 这个方法的好处在于可以产生任意长度的文字，并且模型的性质决定了它有能力学到文字于文字之间的联系(temporal relations/dependencies)。
 不足之处在于sequential natural决定了它的计算效率没有CNN高，并且还有潜在的gradients exploding/vanishing的问题
 
 
 
-另一类不需要对文字预先分割的方法就是attention-mechanism，attention可以分为hard attention和soft attention.
+3,另一类不需要对文字预先分割的方法就是attention-mechanism，attention可以分为hard attention和soft attention.
 
-http://www.wildml.com/2016/01/attention-and-memory-in-deep-learning-and-nlp/
-
+An article of OCR using Attention-Mechanism:
+https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Lee_Recursive_Recurrent_Nets_CVPR_2016_paper.pdf
 
 其中hard attention能够直接给出hard location，
 通常是bounding box的位置 （https://arxiv.org/pdf/1412.7755.pdf), 想法直观，
