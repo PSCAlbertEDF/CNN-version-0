@@ -14,13 +14,20 @@ multi-digit number classification([1312.6082] Multi-digit Number Recognition fro
 这个方法的好处在于可以产生任意长度的文字，并且模型的性质决定了它有能力学到文字于文字之间的联系(temporal relations/dependencies)。
 不足之处在于sequential natural决定了它的计算效率没有CNN高，并且还有潜在的gradients exploding/vanishing的问题
 
-以上说的这两类模型都不需要对文字预先分割(end-to-end)。
-另一类不需要对文字预先分割的方法就是attention-mechanism，attention可以分为hard attention和soft attention. 
-其中hard attention能够直接给出hard location，通常是bounding box的位置 （https://arxiv.org/pdf/1412.7755.pdf), 
-想法直观，缺点是不能直接暴力bp。soft attention通常是rnn/lstm/gru encoder-decoder model (https://arxiv.org/abs/1603.03101), 
+
+
+另一类不需要对文字预先分割的方法就是attention-mechanism，attention可以分为hard attention和soft attention.
+
+http://www.wildml.com/2016/01/attention-and-memory-in-deep-learning-and-nlp/
+
+
+其中hard attention能够直接给出hard location，
+通常是bounding box的位置 （https://arxiv.org/pdf/1412.7755.pdf), 想法直观，
+缺点是不能直接暴力bp。soft attention通常是rnn/lstm/gru encoder-decoder model (https://arxiv.org/abs/1603.03101), 
 可以暴力bp。
-还有一种比较特别的gradient-based    
-attention(http://www.ics.uci.edu/~yyang8/research/feedback/feedback-iccv2015.pdf) 也挺有意思。
+
+还有一种比较特别的gradient-based       attention(http://www.ics.uci.edu/~yyang8/research/feedback/feedback-iccv2015.pdf) 也挺有意思。
+
 
 
 
